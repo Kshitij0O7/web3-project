@@ -15,7 +15,7 @@ import Logo from '../../assets/mainLogo.png'
 function Home() {
 
   return (
-    <>  
+    <div className='bg-[#F15946]'>  
         <Navbar/>
         <div className='flex flex-row justify-evenly  pt-5'>
             <div className='flex items-center flex-col space-y-10'>
@@ -191,7 +191,7 @@ function Home() {
             <p style={{fontFamily:'Goblin One'}} className='text-white text-xl text-center'>Developed by : Neel Lohith , Dhanush kamath , Kshitij Mahajan</p>
 
         </div>
-    </>
+    </div>
   )
 }
 
