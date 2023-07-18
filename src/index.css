@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+
+  background-color: #F15946;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.scrollable-container {
+  overflow-y: scroll; /* Enable vertical scrolling */
+  scrollbar-width: thin; /* Width of the scroll bar */
+  scrollbar-color: #888888 #dddddd; /* Color of the scroll bar thumb and track */
+}
+
+/* Styling the thumb and track of the scroll bar */
+.scrollable-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: 4px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background-color: #dddddd;
+  border-radius: 4px;
+}
+
+
