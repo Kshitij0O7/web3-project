@@ -27,7 +27,7 @@ function seller() {
                         <p className='bg-white w-5 h-5 rounded-full'></p>
                         <p className='bg-white w-5 h-5 rounded-full'></p>
                     </section>
-                    <p className='text-white text-xl mt-4'>upload a image of item</p>
+                    <p className='text-white text-xl mt-4'>Upload a image of item</p>
                 </div>
                 <p className='bg-white relative p-4 rounded-[100px] w-[439px]'>
                     <input type = 'file' className='flex-1 opacity-0 absolute w-full h-full inset-0' onChange={(e)=>{setImage(e.target.files[0])}}/> 
@@ -43,12 +43,48 @@ function seller() {
                         <div className='mt-4 flex flex-col items-center gap-6'>
                             <h2 style={{fontFamily:'Goblin One'}}  className='text-black text-lg text-center'>Minimum bid in {"(ETH)"}</h2>
                             <ul className='grid grid-cols-2 gap-3 place-items-center mt-4'>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name= 'min'  onChange={(e)=>{setMinBid('0.01')}}/>0.01</li>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name = 'min' onChange={(e)=>{setMinBid('0.05')}}/>0.05</li>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name = 'min' onChange={(e)=>{setMinBid('0.1')}}/>0.1</li>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name = 'min' onChange={(e)=>{setMinBid('0.25')}}/>0.25</li>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name = 'min' onChange={(e)=>{setMinBid('0.5')}}/>0.5</li>
-                                <li className='bg-black text-3xl text-white w-32 text-center rounded-3xl px-5'><input type='radio' name = 'min' onChange={(e)=>{setMinBid('1')}}/>1</li>
+                                <li className='bg-black text-3xl text-white w-32 relative text-center rounded-3xl px-5'>
+                                    <input 
+                                        type='radio' className='flex-1 opacity-0 absolute w-full h-full inset-0' name= 'min'  
+                                        onChange={(e)=>{setMinBid('0.01')}}
+                                    />
+                                    0.01
+                                </li>
+                                <li className='bg-black relative text-3xl text-white w-32 text-center rounded-3xl px-5'>
+                                    <input 
+                                        className='flex-1 opacity-0 absolute w-full h-full inset-0'
+                                        type='radio' name = 'min' onChange={(e)=>{setMinBid('0.05')}}
+                                    />
+                                    0.05
+                                </li>
+                                <li className='bg-black text-3xl relative text-white w-32 text-center rounded-3xl px-5'>
+                                    <input 
+                                        type='radio' className='flex-1 opacity-0 absolute w-full h-full inset-0'name = 'min' 
+                                        onChange={(e)=>{setMinBid('0.1')}}
+                                    />
+                                    0.1
+                                </li>
+                                <li className='bg-black text-3xl relative text-white w-32 text-center rounded-3xl px-5'>
+                                    <input 
+                                        className='flex-1 opacity-0 absolute w-full h-full inset-0'
+                                        type='radio' name = 'min' onChange={(e)=>{setMinBid('0.25')}}
+                                    />
+                                    0.25
+                                </li>
+                                <li className='bg-black text-3xl relative text-white w-32 text-center rounded-3xl px-5'>
+                                    <input
+                                        className='flex-1 opacity-0 absolute w-full h-full inset-0'
+                                        type='radio' name = 'min' onChange={(e)=>{setMinBid('0.5')}}
+                                    />
+                                    0.5
+                                </li>
+                                <li className='bg-black text-3xl relative text-white w-32 text-center rounded-3xl px-5'>
+                                    <input
+                                        className='flex-1 opacity-0 absolute w-full h-full inset-0'
+                                        type='radio' name = 'min' onChange={(e)=>{setMinBid('1')}}
+                                    />
+                                    1
+                                </li>
                             </ul>
                             <button className='bg-black w-[60%] rounded-2xl' >
                                 {/* List item */}

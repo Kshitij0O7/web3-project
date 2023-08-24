@@ -14,7 +14,7 @@ function Navbar() {
           <div className='mr-[5%] flex flex-column items-center space-x-5 pt-3'>
             <ul className='flex flex-column space-x-10'>
               <Link to={'/'}>
-                <li className=' text-2xl text-white font-normal' style={{fontFamily:'Dela Gothic One'}}>home</li>
+                <li className=' text-2xl text-white font-normal' style={{fontFamily:'Dela Gothic One'}}>Home</li>
               </Link>
               <Link to={'/seller'}>
                 <li className=' text-2xl text-white font-normal' style={{fontFamily:'Dela Gothic One'}}>Sell your item</li>
