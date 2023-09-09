@@ -6,18 +6,11 @@
 // global scope, and execute the script.
 import hre from "hardhat";
 
-const currentTimestampInSeconds = Math.round(Date.now() / 1000);
-const unlockTime = currentTimestampInSeconds + 60;
+const AuctionFactory = await hre.ethers.getContractFactory("AuctionFactory");
+const auctionFactory = await AuctionFactory.deploy();
 
-const lockedAmount = hre.ethers.utils.parseEther("0.001");
-
-const Auction = await hre.ethers.getContractFactory("Auction");
-const auction = await Auction.deploy();
-
-await auction.deployed();
+await auctionFactory.deployed();
 
 console.log(
-  `Lock with ${ethers.utils.formatEther(
-    lockedAmount
-  )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+  `Deployed to ${auctionFactory.address}`
 );
