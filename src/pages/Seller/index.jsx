@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Navbar from '../../components/Navbar'
 import Upload from '../../assets/upload.png'
-
+import { ethers } from 'ethers';
 function seller() {
     const [image, setImage] = useState(null);
     const [name, setName] = useState("");
     const [minBid, setMinBid] = useState("");
+    const [isSelected, setIsSelected] = useState();
 
     const handleSubmit = (e) =>{
         e.preventDefault();

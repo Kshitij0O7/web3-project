@@ -4,6 +4,16 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 
+contract AuctionFactory{
+    address public auction;
+    uint256 private endTime = block.timestamp;
+    function startAuction(uint256 duration) public {
+        require(block.timestamp>endTime, "Cannot start another auction until current one is ended");
+        auction = address(new Auction(duration));
+        endTime += duration;
+    }
+}
+
 contract Auction is ReentrancyGuard {
     // using Address for address payable;
     struct ListedItem {
